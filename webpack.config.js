@@ -1,9 +1,12 @@
 module.exports = {
     context: __dirname + "/",
-    entry: "./bundle/index.js",
+    entry: {
+        falcor1: "./bundle/falcor1.js",
+        react1: "./bundle/react1.js"
+    },
     output: {
         path: __dirname + "/public",
-        filename: "bundle.js"
+        filename: "[name].bundle.js"
     },
     module: {
         loaders: [
