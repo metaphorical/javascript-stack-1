@@ -1,0 +1,30 @@
+{
+  "name": "edge-fe-stack-pg",
+  "version": "0.0.1",
+  "description": "playground",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metaphorical/falcor-react-playground"
+  },
+  "author": "Rastko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metaphorical/falcor-react-playground/issues"
+  },
+  "homepage": "https://github.com/metaphorical/falcor-react-playground",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.1.18",
+    "falcor": "^0.1.14",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}
