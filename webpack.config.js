@@ -1,12 +1,12 @@
 module.exports = {
     context: __dirname + "/",
     entry: {
-        falcor1: "./bundle/falcor1.js",
-        react1: "./bundle/react1.js",
-        react2: "./bundle/react2.js"
+        falcor1: "./app/client/bundle/falcor1.js",
+        react1: "./app/client/bundle/react1.js",
+        react2: "./app/client/bundle/react2.js"
     },
     output: {
-        path: __dirname + "/public",
+        path: __dirname + "/public/js",
         filename: "[name].bundle.js"
     },
     module: {
