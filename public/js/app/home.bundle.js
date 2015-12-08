@@ -19027,7 +19027,7 @@
 	        console.log('Place code here... for umm... search?');
 	    },
 	    render() {
-	        return searchForm;
+	        return searchForm(this);
 	    }
 	});
 
@@ -19036,15 +19036,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM */const React = __webpack_require__(1);
-	module.exports = (
-	    React.createElement("div", {class: "Search"}, 
-	        React.createElement("h1", null, "Enter your search"), 
-	        React.createElement("form", {action: ""}, 
-	            React.createElement("input", {type: "text", placeholder: "Movie name"}), 
-	            React.createElement("input", {type: "button", value: "Go!", onClick: this.doSearch})
+	module.exports = function(view)  { return (
+	        React.createElement("div", {class: "Search"}, 
+	            React.createElement("h1", null, "Enter your search"), 
+	            React.createElement("form", {action: ""}, 
+	                React.createElement("input", {type: "text", placeholder: "Movie name"}), 
+	                React.createElement("input", {type: "button", value: "Go!", onClick: view.doSearch})
+	            )
 	        )
-	    )
-	);
+	    );
+	};
 
 
 /***/ }

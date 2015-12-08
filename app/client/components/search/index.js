@@ -10,6 +10,6 @@ module.exports = React.createClass({
         console.log('Place code here... for umm... search?');
     },
     render() {
-        return searchForm;
+        return searchForm(this);
     }
 });
