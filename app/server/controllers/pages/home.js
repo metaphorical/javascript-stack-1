@@ -1,6 +1,14 @@
+const React = require('react');
+const ReactDOM = require('react-dom/server');
+const components = require('../../../client/components');
+
+const searchComponent = React.createFactory(components.Search);
+
 var homeController = {
-    getHome: function (req, res) {
-        res.send('<h1>Home page</h1>');
+    getHome(req, res) {
+        res.render('layout', {
+            react: ReactDOM.renderToString(searchComponent({}))
+        });
     }
 };
 

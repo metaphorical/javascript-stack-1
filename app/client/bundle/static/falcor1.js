@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 
 //models here are falcor models and falcor gets required there to abstract it
 //for different usages I want to have for demo purposes
-var model = require('../../models/falcor_model1.js');
+var model = require('../../../models/falcor_model1.js');
 
 //@TODO: see about that other Falcor syntax for paths
 //Paths are actually kind of queries

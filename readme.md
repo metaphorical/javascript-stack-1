@@ -4,8 +4,6 @@ Me playing with technologies and concepts... Most of the code will be documented
 
 Server is built in Express and will utilize open movie db API and maybe more similar APIs.
 
-**Note:** did not get to setup React devtools. From what I understood, using it is just a matter of exposing React to window.React and there are tools like [Webpack expose-loader](https://www.npmjs.com/package/expose-loader)
-
 ###Stack
 
 Stuff that I am piling up inside this playground
@@ -15,6 +13,7 @@ Stuff that I am piling up inside this playground
 * React
 * Falcor
 * Express.js
+* JADE templating engine (for now - it is plan to remove it and do everything in jsx)
 
 ####Build, transpile, compile, compress
 
@@ -34,3 +33,12 @@ Stuff that I am piling up inside this playground
 [Express](http://expressjs.com/en/index.html)
 
 [Repo for Express server boilerplate](https://github.com/metaphorical/quantum-boilerplate)
+
+####Usefull read/watch
+
+[Structuring React project](http://reactjsnews.com/structuring-react-projects/)
+[Developing With Webpack](http://survivejs.com/webpack_react/developing_with_webpack/)
+
+####StackOverflow etc
+
+[React server side render Babel 6x](http://stackoverflow.com/questions/33472258/react-serverside-rendering-unexpected-token-jsx-and-babel)

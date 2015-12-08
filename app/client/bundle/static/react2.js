@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 const _ = require('lodash');
 
 
-var model = require('../../models/falcor_model1.js');
+var model = require('../../../models/falcor_model1.js');
 
 
 const App = React.createClass({

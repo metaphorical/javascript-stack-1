@@ -1,3 +1,4 @@
+require('babel-register');
 var app = require('./app');
 var pagesRouter = require('./app/server/router/pages.js');
 
