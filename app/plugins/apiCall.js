@@ -12,7 +12,7 @@ var logger = global.quantum.logger;
  * @param {bool}   expose   Flag to expose request object (to be able to write a body of request)
  */
 var apiCall = function(options, callback, write) {
-    logger.info('API request to ' + url.format(options));
+    logger.info('API request to ' + JSON.stringify(options));
     // setup protocol based on passed parameters
     var protocol = (options.port && options.port === '443') ? https : http;
     try {

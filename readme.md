@@ -40,6 +40,9 @@ Stuff that I am piling up inside this playground
 
 [Developing With Webpack](http://survivejs.com/webpack_react/developing_with_webpack/)
 
+[Netflix JS talks - Falcor](https://www.youtube.com/watch?v=z8UgDZ4rXBU)
+
+
 ####StackOverflow etc
 
 [React server side render Babel 6x](http://stackoverflow.com/questions/33472258/react-serverside-rendering-unexpected-token-jsx-and-babel)
