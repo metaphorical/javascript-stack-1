@@ -1,5 +1,5 @@
 const React = require('react');
-const resultCard = require('./resultCard.jsx.jsx');
+const resultCard = require('./resultCard.jsx');
 
 module.exports = React.createClass({
     componentDidMount() {

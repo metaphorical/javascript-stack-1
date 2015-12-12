@@ -1,7 +1,7 @@
 var FalcorRouter = require("falcor-router");
 var moviesService = require("../services/movies.js");
 /**
- *  Falcor Router instance to handle data for the system
+ *  Falcor Router instance to handle data for the systemq
  */
 var router = new FalcorRouter([
     {
@@ -25,8 +25,8 @@ var router = new FalcorRouter([
                      */
                     var results = JSON.parse(JSONResults).Search;
                     var model = pathSet.searchText.map(function(key) {
-                            return { path: [pathSet[0], key], value: {items: pathSet.resultKeys.map((key)=>{
-                                    return results[key];
+                            return { path: [pathSet[0], key], value: {items: pathSet.resultKeys.map((index)=> {
+                                    return results[index];
                                 })
                             }};
                         });
