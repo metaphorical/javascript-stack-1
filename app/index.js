@@ -24,7 +24,7 @@ global.quantum.logger = require('./plugins/logger.js');
 app.use(bodyParser.text({ type: 'text/*' }));
 
 app.set('view engine', 'jade');
-app.set('views', path.join(__dirname, '/client/views'));
+app.set('views', path.join(__dirname, '/client/templates'));
 
 app.use(express.static('public'));
 

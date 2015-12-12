@@ -8,11 +8,11 @@ module.exports = {
     //Since key is used as a name of a file, I use it to add multiple output points by joining path and
     //concatinating with name that includes new path (pushing it all to public/js, but sorting into static and app folders
     entry: {
-        "static/falcor1": "./app/client/bundle/static/falcor1.js",
-        "static/react1": "./app/client/bundle/static/react1.js",
-        "static/react2": "./app/client/bundle/static/react2.js",
+        "static/falcor1": "./app/client/views/static/falcor1.js",
+        "static/react1": "./app/client/views/static/react1.js",
+        "static/react2": "./app/client/views/static/react2.js",
 
-        "app/home": "./app/client/bundle/app/home.js"
+        "app/home": "./app/client/views/app/home.js"
     },
     output: {
         path: path.join(__dirname, 'public/js'),
