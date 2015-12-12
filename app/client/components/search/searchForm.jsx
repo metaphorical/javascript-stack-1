@@ -1,6 +1,8 @@
 const React = require('react');
+const className = require('classnames');
+const styles = require('./searchForm.css');
 module.exports = (view) => { return (
-        <div class="Search">
+        <div className={styles.searchBox}>
             <h1>Enter your search</h1>
             <form action="">
                 <input type="text" placeholder="Movie name"/>

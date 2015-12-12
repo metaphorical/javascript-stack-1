@@ -11,6 +11,8 @@ var model = new falcor.Model({source: new HttpDataSource('/model.json')});
 
 //Call the search and return json that we need
 model.
+    //We put a path into get... make sure it is closed (contains end points (leafs of a branch or whatever you want to call it)
+    //because in other case it is going to give you a pain of several requests for the same data.
     get("search['star wars']items[0..3]['Title', 'Poster']").
     then(function(result) {
         console.log(JSON.stringify(result, null, 4));

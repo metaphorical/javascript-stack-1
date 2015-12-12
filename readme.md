@@ -2,7 +2,9 @@
 
 Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education...
 
-Server is built in Express and will utilize open movie db API and maybe more similar APIs.
+Server is built in Express and will utilize open movie db API and maybe more similar APIs. Most of core stuff are written in ES6.
+
+Client side structure is based around components with every component having it's js, html and css bundled together. This is achieved through usage of css modules.
 
 ###Stack
 
@@ -41,6 +43,8 @@ Stuff that I am piling up inside this playground
 [Developing With Webpack](http://survivejs.com/webpack_react/developing_with_webpack/)
 
 [Netflix JS talks - Falcor](https://www.youtube.com/watch?v=z8UgDZ4rXBU)
+
+[CSS Modules](http://glenmaddern.com/articles/css-modules)
 
 
 ####StackOverflow etc

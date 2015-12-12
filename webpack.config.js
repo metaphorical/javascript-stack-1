@@ -1,5 +1,7 @@
-path = require('path');
-webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: __dirname + "/",
@@ -18,7 +20,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            //Babel loader with added react preset, react 0.14+ and babel 6+ wont work together w/o this
+            // Babel loader with added react preset, react 0.14+ and babel 6+ wont work together w/o this
             {
                 test:/\.js?$/,
                 loader: "babel",
@@ -26,15 +28,26 @@ module.exports = {
                     presets:['react']
                 }
             },
-            //To be able ot use .jsx files for separating HTML from js in component we need jsx loader
+            // To be able to use .jsx files for separating HTML from js in component we need jsx loader
             {
                 //tell webpack to use jsx-loader for all *.jsx files
                 test: /\.jsx$/,
                 loader: 'jsx-loader?insertPragma=React.DOM&harmony'
+            },
+            // Post-css loader setup, ot be able to bundle all the code for the components together
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
             }
+
         ]
     },
+    postcss: [
+        require('autoprefixer-core')
+    ],
     plugins: [
+        // Plugin for writing css bundle loaded in components
+        new ExtractTextPlugin('../css/style.css', { allChunks: true }),
         new webpack.DefinePlugin({
             // This is way to set or create global variables...
             // Will use it to check if React is rendered on server or on client side (in webpack or node)
