@@ -6,6 +6,15 @@ Server is built in Express and will utilize open movie db API and maybe more sim
 
 Client side structure is based around components with every component having it's js, html and css bundled together. This is achieved through usage of css modules.
 
+###Research conclusions
+
+####Falcor
+Really useful and highly versatile library that can fully change and even improve a way you handle data in your app, especially when you are working in microservices (like) architecture with several services providing data.
+
+####CSS Modules
+Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc... **Big problem** at this point is server side rendering which is still crucial for SEO, and may be one of performance factors for your app. Doing server side rendering with this architecture can be a pain and require some suboptimal code manipulation and architectural compromises.
+
+
 ###Stack
 
 Stuff that I am piling up inside this playground
@@ -39,6 +48,8 @@ Stuff that I am piling up inside this playground
 ####Usefull read/watch
 
 [Structuring React project](http://reactjsnews.com/structuring-react-projects/)
+
+[React - Complementary Tools](https://github.com/facebook/react/wiki/Complementary-Tools)
 
 [Developing With Webpack](http://survivejs.com/webpack_react/developing_with_webpack/)
 
