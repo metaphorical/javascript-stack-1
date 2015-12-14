@@ -1,0 +1,30 @@
+.container {
+    width: 48%;
+    display:inline-block;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #e0e8e0;
+
+    cursor:pointer;
+
+}
+.container:hover {
+    background-color: white;
+}
+
+
+.container h1 {
+    font-size: 1.2em;
+    float: left;
+}
+
+.container img {
+    height: 120px;
+    float: left;
+}
+
+.container:nth-child(2n) {
+    margin-left: 2%;
+}
+

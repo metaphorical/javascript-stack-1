@@ -7,11 +7,12 @@ const styles = require('./resultList.css');
 module.exports = (view) => {
     let results = view.props.results;
     return (
-        <ul>
+        <ul className={styles.container}>
             {results.map( (result) => {
                     return React.createElement(resultCard, {key: result.key,
                         Title: result.value.Title,
-                        Poster: result.value.Poster});
+                        Poster: result.value.Poster,
+                        Year: result.value.Year});
                 })
             }
         </ul>
