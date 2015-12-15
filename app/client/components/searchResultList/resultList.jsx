@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const React = require('react');
 const className = require('classnames');
@@ -12,7 +12,8 @@ module.exports = (view) => {
                     return React.createElement(resultCard, {key: result.key,
                         Title: result.value.Title,
                         Poster: result.value.Poster,
-                        Year: result.value.Year});
+                        Year: result.value.Year,
+                        imdbID: result.value.imdbID});
                 })
             }
         </ul>

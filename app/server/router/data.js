@@ -33,6 +33,21 @@ var router = new FalcorRouter([
                     return model;
                 });
         }
+    },
+    {
+        route: 'detail[{keys:imdbID}]',
+        get: function(pathSet) {
+            //Using search service to fetch data for the model
+            return moviesService.getById(pathSet.imdbID)
+                .then(function(JSONResults) {
+                    var results = JSON.parse(JSONResults);
+                    var model = pathSet.imdbID.map(function(key) {
+                            return { path: [pathSet[0], key], value: results
+                            };
+                        });
+                    return model;
+                });
+        }
     }
 ]);
 

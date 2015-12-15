@@ -18,7 +18,7 @@ module.exports = React.createClass({
             movieModel.
                 //We put a path into get... make sure it is closed (contains end points (leafs of a branch or whatever you want to call it)
                 //because in other case it is going to give you a pain of several requests for the same data.
-            get("search['" + searchText + "']items[0..9]['Title', 'Poster', 'Year']").
+            get("search['" + searchText + "']items[0..9]['Title', 'Poster', 'Year', 'imdbID']").
                 then(function(result) {
                     let searchResults = result.json.search[searchText].items;
                     /* here indexes are order keys but nevertheless we need to do in the way that allows for
