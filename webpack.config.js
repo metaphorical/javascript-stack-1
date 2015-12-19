@@ -102,7 +102,24 @@ module.exports = [{
                 }
             },
             { test: /\.jsx?$/, exclude: /node_modules/, loader: 'jsx-loader' },
-            { test: /\.css$/, exclude: /node_modules/, loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader' }
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
+            }
         ]
-    }
+    },
+    postcss: [
+        require('autoprefixer-core')
+    ],
+    plugins: [
+        // Plugin for writing css bundle loaded in components
+        new ExtractTextPlugin('../css/main.css', { allChunks: true }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production'),
+                APP_ENV: JSON.stringify('node')
+            }
+        })
+    ]
+
 }];
