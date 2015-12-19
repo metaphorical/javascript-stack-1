@@ -4,6 +4,29 @@ const fs = require('fs');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+//@TODO - Refactor this file to get all the duplicated settings in the same place (webpack default settings)
+
+/*
+ * Solution below gave me the most problems while figuring out server side rendering solution...
+ *
+ * The main problem is that webpack is assuming that you are using it in the browser, meaning that if you set externals
+ * it works for the browser, so require('something') becomes just something (setting it to global).
+ *
+ * We need to change this by being explicit about this being commonjs modules
+ *
+ * Example of externals object:
+ *
+ * {
+ * ...
+ * 'body-parser': 'commonjs body-parser',
+ * 'bucker': 'commonjs bucker',
+ * 'express': 'commonjs express'
+ * ...
+ * }
+ *
+ * Without this we can get any error in line with your code looking for the external module in globals and not finding it
+ *
+ */
 var nodeModules = {};
 
 fs.readdirSync('node_modules')
@@ -77,21 +100,24 @@ module.exports = [{
     entry: {
         "components": "./app/client/components/server-components.js"
     },
+    //making server side rendering version of code
     output: {
         path: path.join(__dirname, 'app/dist/'),
         filename: "[name].packed.js",
+        // declaring format of export library (preparing it for node
+        // http://webpack.github.io/docs/configuration.html#output-librarytarget
         libraryTarget: 'commonjs2'
     },
     target: 'node',
-
+    //Server side externals
     externals: nodeModules,
-
+    //handling of node specific stuff
     node: {
         __filename: true,
         __dirname: true,
         console: true
     },
-
+    //Loading stuff in the same way as on client side
     module: {
         loaders: [
             {
@@ -109,14 +135,15 @@ module.exports = [{
         ]
     },
     postcss: [
-        require('autoprefixer-core')
+        require('autoprefixer')
     ],
     plugins: [
-        // Plugin for writing css bundle loaded in components
-        new ExtractTextPlugin('../css/main.css', { allChunks: true }),
+        // Writing to css file that wont be used (important one is client side rendered.
+        new ExtractTextPlugin('../css/discard.css', { allChunks: true }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production'),
+                //Tell it that it is in node
                 APP_ENV: JSON.stringify('node')
             }
         })

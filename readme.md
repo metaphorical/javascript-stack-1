@@ -45,7 +45,8 @@ Stuff that I am piling up inside this playground
 
 [Repo for Express server boilerplate](https://github.com/metaphorical/quantum-boilerplate)
 
-####Usefull read/watch
+
+####Usefull read/watch - lots of solutions/inspirations for solutions in this repo come from here:
 
 [Structuring React project](http://reactjsnews.com/structuring-react-projects/)
 
@@ -56,6 +57,11 @@ Stuff that I am piling up inside this playground
 [Netflix JS talks - Falcor](https://www.youtube.com/watch?v=z8UgDZ4rXBU)
 
 [CSS Modules](http://glenmaddern.com/articles/css-modules)
+
+[CSS Modules 2](http://www.sitepoint.com/understanding-css-modules-methodology/)
+
+[Backend Apps Aith Webpack](http://jlongster.com/Backend-Apps-with-Webpack--Part-I)
+
 
 
 ####StackOverflow etc
