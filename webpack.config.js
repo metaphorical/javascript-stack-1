@@ -1,9 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+var nodeModules = {};
+
+fs.readdirSync('node_modules')
+    .filter(function(x) {
+        return ['.bin'].indexOf(x) === -1;
+    })
+    .forEach(function(mod) {
+        nodeModules[mod] = 'commonjs ' + mod;
+    });
+
+module.exports = [{
+    name: "client",
     context: __dirname + "/",
     //Since key is used as a name of a file, I use it to add multiple output points by joining path and
     //concatinating with name that includes new path (pushing it all to public/js, but sorting into static and app folders
@@ -59,4 +71,38 @@ module.exports = {
             }
         })
     ]
-};
+},{
+    name: "server",
+    context: __dirname + "/",
+    entry: {
+        "components": "./app/client/components/server-components.js"
+    },
+    output: {
+        path: path.join(__dirname, 'app/dist/'),
+        filename: "[name].packed.js",
+        libraryTarget: 'commonjs2'
+    },
+    target: 'node',
+
+    externals: nodeModules,
+
+    node: {
+        __filename: true,
+        __dirname: true,
+        console: true
+    },
+
+    module: {
+        loaders: [
+            {
+                test:/\.js?$/,
+                loader: "babel",
+                query: {
+                    presets:['react']
+                }
+            },
+            { test: /\.jsx?$/, exclude: /node_modules/, loader: 'jsx-loader' },
+            { test: /\.css$/, exclude: /node_modules/, loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader' }
+        ]
+    }
+}];
