@@ -47,7 +47,9 @@ module.exports = [{
         "static/react1": "./app/client/views/static/react1.js",
         "static/react2": "./app/client/views/static/react2.js",
 
-        "app/home": "./app/client/views/app/home.js"
+        "app/home": "./app/client/views/app/home.js",
+
+        "../../tests/packed-specs/search": "./tests/specs/search-form-spec.js"
     },
     output: {
         path: path.join(__dirname, 'public/js'),
@@ -78,7 +80,7 @@ module.exports = [{
         ]
     },
     postcss: [
-        require('autoprefixer-core')
+        require('autoprefixer')
     ],
     plugins: [
         // Plugin for writing css bundle loaded in components

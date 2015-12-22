@@ -12,7 +12,8 @@ Client side structure is based around components with every component having it'
 Really useful and highly versatile library that can fully change and even improve a way you handle data in your app, especially when you are working in microservices (like) architecture with several services providing data.
 
 ####CSS Modules
-Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc... **Big problem** at this point is server side rendering which is still crucial for SEO, and may be one of performance factors for your app. Doing server side rendering with this architecture can be a pain and require some suboptimal code manipulation and architectural compromises.
+Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc... 
+For performance and better SEO, I also solved server side rendering... This part is little crude and webpack config needs to be dried, but everything performs really good.
 
 
 ###Stack
@@ -67,3 +68,4 @@ Stuff that I am piling up inside this playground
 ####StackOverflow etc
 
 [React server side render Babel 6x](http://stackoverflow.com/questions/33472258/react-serverside-rendering-unexpected-token-jsx-and-babel)
+
