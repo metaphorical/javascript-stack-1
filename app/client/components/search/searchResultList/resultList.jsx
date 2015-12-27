@@ -6,6 +6,7 @@ const resultCard = require('../searchCard');
 const styles = require('./resultList.css');
 module.exports = (view) => {
     let results = view.props.results;
+    let searchString = view.props.searchString;
     return (
         <ul className={styles.container}>
             {results.map( (result) => {
@@ -13,7 +14,9 @@ module.exports = (view) => {
                         Title: result.value.Title,
                         Poster: result.value.Poster,
                         Year: result.value.Year,
-                        imdbID: result.value.imdbID});
+                        imdbID: result.value.imdbID,
+                        searchString: searchString
+                    });
                 })
             }
         </ul>

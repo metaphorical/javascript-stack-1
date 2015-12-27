@@ -61,8 +61,9 @@ Stuff that I am piling up inside this playground
 
 [CSS Modules 2](http://www.sitepoint.com/understanding-css-modules-methodology/)
 
-[Backend Apps Aith Webpack](http://jlongster.com/Backend-Apps-with-Webpack--Part-I)
+[Backend Apps With Webpack](http://jlongster.com/Backend-Apps-with-Webpack--Part-I)
 
+[Netflix JavaScript Talks - Async JavaScript with Reactive Extensions](https://www.youtube.com/watch?v=FAZJsxcykPs&list=PLfXiENmg6yyU5kEHyo1kYkq7HEzBOoiTT&index=4)
 
 
 ####StackOverflow etc

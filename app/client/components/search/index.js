@@ -3,7 +3,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const searchForm = require('./searchForm.jsx');
-const resultList = require('../searchResultList');
+const resultList = require('./searchResultList');
 var movieModel = require('../../../models/movieModel.js');
 
 module.exports = React.createClass({
@@ -19,7 +19,7 @@ module.exports = React.createClass({
                 //We put a path into get... make sure it is closed (contains end points (leafs of a branch or whatever you want to call it)
                 //because in other case it is going to give you a pain of several requests for the same data.
             get("search['" + searchText + "']items[0..9]['Title', 'Poster', 'Year', 'imdbID']").
-                then(function(result) {
+                then((result) => {
                     let searchResults = result.json.search[searchText].items;
                     /* here indexes are order keys but nevertheless we need to do in the way that allows for
                        easier relating of data...
@@ -34,8 +34,10 @@ module.exports = React.createClass({
                             value: searchResults[key]
                         }
                     });
-
-                    ReactDOM.render(React.createElement(resultList, {results: results}), window.document.getElementById('resultsList'));
+                    ReactDOM.render(React.createElement(resultList, {
+                        results: results,
+                        searchString: searchText
+                    }), window.document.getElementById('resultsList'));
                 });
         }
     },

@@ -1,0 +1,15 @@
+.container {
+    width: 48%;
+    display:inline-block;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #ccc;
+
+    cursor:pointer;
+}
+
+
+
+
+
