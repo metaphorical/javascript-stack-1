@@ -80,7 +80,8 @@ module.exports = [{
         ]
     },
     postcss: [
-        require('autoprefixer')
+        require('autoprefixer'),
+        require('postcss-nested')
     ],
     plugins: [
         // Plugin for writing css bundle loaded in components

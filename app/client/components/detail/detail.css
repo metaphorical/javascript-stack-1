@@ -4,9 +4,25 @@
     margin-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    background-color: #ccc;
+    background-color: #e0e8e0;
 
     cursor:pointer;
+
+h1 {
+    font-size: 1.2em;
+    float: left;
+}
+&:hover {
+     background-color: white;
+ }
+img {
+    height: 120px;
+    float: left;
+}
+&:nth-child(2n) {
+     margin-left: 2%;
+ }
+
 }
 
 
