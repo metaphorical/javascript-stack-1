@@ -142,7 +142,7 @@ module.exports = [{
     ],
     plugins: [
         // Writing to css file that wont be used (important one is client side rendered.
-        new ExtractTextPlugin('../css/discard.css', { allChunks: true }),
+        new ExtractTextPlugin('../dist/discard/discard.css', { allChunks: true }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production'),

@@ -1,4 +1,7 @@
 .idea/
 node_modules/
-public/js/*/*.bundle.js
-public/css/*.css
+app/dist/**/*.js
+app/dist/**/*.css
+public/js/**/*.bundle.js
+public/css/**/*.css
+tests/packed-specs/**/*.js
