@@ -28,7 +28,8 @@ module.exports = React.createClass({
                     Object.keys(results).map((key) => {
                         resultsById[results[key].imdbID] = results[key];
                     });
-
+                    var result = resultsById[imdbID];
+                    result.Search = searchString;
                     detailComponent = ReactDOM.render(React.createElement(detail, resultsById[imdbID]), window.document.getElementById('App'));
                 });
 
