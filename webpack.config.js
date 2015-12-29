@@ -95,6 +95,11 @@ module.exports = [{
                 NODE_ENV: JSON.stringify('production'),
                 APP_ENV: JSON.stringify('browser')
             }
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
         })
     ]
 },{
