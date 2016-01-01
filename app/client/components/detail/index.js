@@ -10,17 +10,18 @@ module.exports = React.createClass({
       console.log('detail page mounted');
     },
     getInitialState() {
-        return {
-            'Title': this.props.Title,
-            'Year': this.props.Year,
-            'Poster': this.props.Poster,
-            'lastSearch': this.props.Search
-        }
+        let initialState = {};
+        initialState['Title'] = this.props.Title || false;
+        initialState['Year'] = this.props.Year || false;
+        initialState['Poster'] = this.props.Poster || false;
+        initialState['lastSearch'] = this.props.Search || false;
+        initialState['Plot'] = this.props.Plot || false;
+
+        return initialState;
     },
     backToSearch(e) {
         e.preventDefault();
         let searchText = this.state.lastSearch;
-        console.log('last Search', searchText);
     },
     render() {
         return detailPage(this);

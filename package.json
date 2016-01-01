@@ -8,7 +8,7 @@
     "url": "https://github.com/metaphorical/falcor-react-playground"
   },
   "scripts": {
-    "devstart": "node_modules/.bin/nodemon server.js",
+    "devstart": "node_modules/.bin/nodemon server.js --ignore public/",
     "watch": "node_modules/.bin/webpack --watch",
     "test": "node_modules/.bin/jasmine-node tests/packed-specs"
   },
