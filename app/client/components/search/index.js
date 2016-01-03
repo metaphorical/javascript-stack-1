@@ -34,7 +34,7 @@ module.exports = React.createClass({
         if (this.state && this.state.lastSearch) {
             detailData.searchText = this.state.lastSearch;
         }
-        this.actions.Detail(detailData)
+        this.actions.Detail(detailData);
     },
     goHome() {
         console.log('wha?');
