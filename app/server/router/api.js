@@ -4,7 +4,7 @@
 var router = require('express').Router();
 
 
-var moviesCtrl = require('../controllers/pages/movies.js');
+var moviesCtrl = require('../controllers/api/movies.js');
 
 
 router.get('/title/:title', moviesCtrl.getByTitle);
