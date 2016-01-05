@@ -1,6 +1,7 @@
 require('babel-register');
 module.exports = {
+    Home: require('./home'),
     Search: require('./search'),
-    SearchCard: require('./search/searchCard'),
-    SearchResultList: require('./search/searchResultList')
+    SearchCard: require('./common/searchCard'),
+    SearchResultList: require('./search/resultsList')
 };

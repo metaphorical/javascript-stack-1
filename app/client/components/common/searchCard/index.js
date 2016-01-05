@@ -13,10 +13,14 @@ module.exports = React.createClass({
         e.preventDefault();
         var imdbID = this.props.imdbID;
         var searchString = this.props.searchString;
-        this.props.detailAction({
+        var params = JSON.stringify({
             imdbID: imdbID,
             searchString: searchString
         });
+        console.log(params);
+        if (process.env.APP_ENV === 'browser') {
+            quantum.router.navigate('/detail/' + encodeURIComponent(params), { trigger:true });
+        }
     },
     render() {
         return resultCard(this);

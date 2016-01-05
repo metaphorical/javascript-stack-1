@@ -4,7 +4,7 @@ var Backbone = require('backbone');
 module.exports = Backbone.Router.extend({
     routes: {
         "search/:searchText": "search",
-        "detail/:imdbID": "detail",
+        "detail/:options": "detail",
         "*splat": "home"
     }
 });

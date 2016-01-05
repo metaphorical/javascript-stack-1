@@ -2,7 +2,7 @@
 
 const React = require('react');
 const className = require('classnames');
-const resultCard = require('../searchCard');
+const resultCard = require('../../common/searchCard');
 const styles = require('./resultList.css');
 
 module.exports = (view) => {

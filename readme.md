@@ -8,13 +8,23 @@ Client side structure is based around components with every component having it'
 
 ###Research conclusions
 
+####React
+React allows us access to full range of cutting edge web UI concepts plus it allows us different conceptual approach to separation of concerns (full separation of concerns vs separation of technologies which is only real separation present in other approaches)
+
 ####Falcor
 Really useful and highly versatile library that can fully change and even improve a way you handle data in your app, especially when you are working in microservices (like) architecture with several services providing data.
 
 ####CSS Modules
-Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc... 
+Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc...
 For performance and better SEO, I also solved server side rendering... This part is little crude and webpack config needs to be dried, but everything performs really good.
 
+####Routing
+
+Route I took with routing (:laughing:) is rather established know-how approach then new stuff approach. I picked backbone router for client side and will implement server side routing with fully reusable (isomorphic) code in expressjs router...
+
+I am considering doing same router on both sides ( probably flatiron director ), but at this point this can be considered production ready paradygm.
+
+I went away from react-router that is going towards being goto solution for this because of syntax which is opposite of what I want to use and also I already had knowledge of solution with same versatility (even bigger since it accepts json which can be used to configure backend routers).
 
 ###Stack
 
@@ -24,6 +34,7 @@ Stuff that I am piling up inside this playground
 
 * React
 * Falcor
+* Backbone.js router
 * Express.js
 * JADE templating engine (for now - it is plan to remove it and do everything in jsx)
 
@@ -44,7 +55,11 @@ Stuff that I am piling up inside this playground
 
 [Express](http://expressjs.com/en/index.html)
 
-[Repo for Express server boilerplate](https://github.com/metaphorical/quantum-boilerplate)
+[Backbone](http://backbonejs.org/)
+
+[Atom react plugin](https://orktes.github.io/atom-react/)
+
+[Sublime Text ES6/Babel/react plugin](https://github.com/babel/babel-sublime)
 
 
 ####Usefull read/watch - lots of solutions/inspirations for solutions in this repo come from here:
@@ -69,4 +84,3 @@ Stuff that I am piling up inside this playground
 ####StackOverflow etc
 
 [React server side render Babel 6x](http://stackoverflow.com/questions/33472258/react-serverside-rendering-unexpected-token-jsx-and-babel)
-

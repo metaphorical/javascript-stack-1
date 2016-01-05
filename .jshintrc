@@ -5,7 +5,8 @@
 
     "node": true,
 
-    "globals": {
-        
-    }
+
+    "undef": true,
+    "unused": true,
+    "predef": ["window", "quantum"]
 }

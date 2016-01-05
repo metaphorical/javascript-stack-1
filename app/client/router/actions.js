@@ -4,11 +4,14 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const components = require('../components');
 const detail = require('../components/detail');
+const searchPage = require('../components/search');
+
 var movieModel = require('../../models/movieModel.js');
-const resultList = require('../components/search/searchResultList');
 
 const detailAction = (options) => {
     var detailComponent = null;
+
+    var options = JSON.parse(options);
     if(options.searchString) {
         movieModel.
             get("search['" + options.searchString + "']items[0..9]['Title', 'Poster', 'Year', 'imdbID']").
@@ -64,15 +67,15 @@ const searchAction = (searchText) => {
                 }
             });
             //ReactDOM.render(React.createElement(components.Search), window.document.getElementById('App'));
-            ReactDOM.render(React.createElement(resultList, {
+            ReactDOM.render(React.createElement(searchPage, {
                 results: results,
                 searchString: searchText,
                 detailAction: detailAction
-            }), window.document.getElementById('resultsList'));
+            }), window.document.getElementById('App'));
         });
 };
 
 module.exports = {
-  Detail: detailAction,
+    Detail: detailAction,
     Search: searchAction
 };

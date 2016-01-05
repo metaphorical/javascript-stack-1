@@ -1,0 +1,11 @@
+.container {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+
+    width: 50%;
+
+    border: 1px solid #ccc;
+    border-radius: 2px;
+
+}
