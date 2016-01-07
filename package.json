@@ -36,6 +36,7 @@
     "body-parser": "^1.14.1",
     "bucker": "^1.1.1",
     "classnames": "^2.2.1",
+    "compression": "^1.6.0",
     "css-loader": "^0.23.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",

@@ -5,7 +5,10 @@ module.exports = (view) => {
     return (
         <div className={styles.searchBox}>
             <form action="">
-                <input type="text" placeholder="Movie name" ref={(ref) => view.searchInput = ref}/>
+                {view.props.searchString ?
+                <input type="text" placeholder="Movie name" ref={(ref) => view.searchInput = ref} value={view.props.searchString}/>
+                :
+                <input type="text" placeholder="Movie name" ref={(ref) => view.searchInput = ref} />}
                 <input type="button" value="Go!" onClick={view.searchAction}/>
             </form>
         </div>

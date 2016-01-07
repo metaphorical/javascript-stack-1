@@ -17,9 +17,10 @@ module.exports = React.createClass({
 
         return initialState;
     },
-    backToSearch(e) {
+    backAction(e) {
         e.preventDefault();
-        let searchText = this.state.lastSearch;
+        var navigateTo = this.state.lastSearch ? ("/search/" + this.state.lastSearch) : "/";
+        quantum.router.navigate(navigateTo, {trigger: true});
     },
     render() {
         return detailPage(this);

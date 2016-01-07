@@ -11,6 +11,13 @@ require('babel-core/register')({
 var path = require('path');
 var express = require('express');
 var app = express();
+var compression = require('compression');
+
+
+//compress compressable
+app.use(compression({
+    level: -1
+}));
 
 var bodyParser = require('body-parser');
 

@@ -80,7 +80,7 @@ module.exports = [{
     plugins: [
         // Plugin for writing css bundle loaded in components
         new ExtractTextPlugin('../css/style.css', { allChunks: true }),
-        new webpack.optimize.UglifyJsPlugin({minimize: true}),
+        // new webpack.optimize.UglifyJsPlugin({minimize: true}),
         new webpack.optimize.DedupePlugin(),
         new webpack.DefinePlugin({
             // This is way to set or create global variables...

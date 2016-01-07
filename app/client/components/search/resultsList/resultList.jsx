@@ -14,8 +14,7 @@ module.exports = (view) => {
                         Poster: result.value.Poster,
                         Year: result.value.Year,
                         imdbID: result.value.imdbID,
-                        searchString: view.props.searchString,
-                        detailAction: view.props.detailAction
+                        searchString: view.props.searchString
                     });
                 })
             }

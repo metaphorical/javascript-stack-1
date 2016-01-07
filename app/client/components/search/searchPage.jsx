@@ -8,10 +8,10 @@ const ResultsList = require('./resultsList')
 module.exports = (view) => { return (
         <div className={styles.searchBox}>
             <div className={styles.header}>
-                <SearchForm />
+                <SearchForm searchString={view.props.searchString}/>
             </div>
             <div className={styles.mainContainer}>
-                <ResultsList results={view.props.results} />
+                <ResultsList results={view.props.results} searchString={view.props.searchString}/>
             </div>
             <div className={styles.sidebar} >
             </div>
