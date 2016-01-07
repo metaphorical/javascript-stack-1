@@ -1,9 +1,7 @@
 "use strict";
 
 const React = require('react');
-const ReactDOM = require('react-dom');
 const detailPage = require('./detail.jsx');
-var movieModel = require('../../../models/movieModel.js');
 
 module.exports = React.createClass({
     componentDidMount() {

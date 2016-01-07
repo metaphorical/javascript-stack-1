@@ -1,9 +1,7 @@
-"use strict"
+"use strict";
 
 const React = require('react');
-const Backbone = require('backbone');
 const searchForm = require('./searchForm.jsx');
-const Router = require('../../../router');
 
 
 module.exports = React.createClass({

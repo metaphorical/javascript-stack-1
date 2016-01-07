@@ -1,7 +1,6 @@
 "use strict"
 
 const React = require('react');
-const Backbone = require('backbone');
 const searchPage = require('./searchPage.jsx');
 
 
