@@ -20,7 +20,6 @@ var searchController = {
                 'results': results,
                 'searchString': req.params.searchString
             };
-            console.log(ReactDOM.renderToString(Components.Search(renderData)));
             res.render('layout', {
                 react: ReactDOM.renderToString(Components.Search(renderData))
             });
