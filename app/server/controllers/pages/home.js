@@ -10,7 +10,7 @@ const Components = require('../../../dist/components.packed');
 
 
 var homeController = {
-    getHome(req, res) {
+    getHome: (req, res) => {
         res.render('layout', {
             react: ReactDOM.renderToString(Components.Home({}))
         });

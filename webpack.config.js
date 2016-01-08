@@ -88,7 +88,7 @@ module.exports = [{
             // APP_ENV does not need to be in process.env
             // NODE_ENV needs to be set to production in prod since lots of stuff, including React use it to optimize prod
             'process.env': {
-                NODE_ENV: JSON.stringify('production'),
+                NODE_ENV: JSON.stringify('development'),
                 APP_ENV: JSON.stringify('browser')
             }
         }),
