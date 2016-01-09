@@ -61,6 +61,8 @@ Stuff that I am piling up inside this playground
 
 [Sublime Text ES6/Babel/react plugin](https://github.com/babel/babel-sublime)
 
+[Expressjs compression middleware](https://www.npmjs.com/package/compression)
+
 
 ####Usefull read/watch - lots of solutions/inspirations for solutions in this repo come from here:
 
