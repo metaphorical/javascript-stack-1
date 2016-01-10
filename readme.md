@@ -63,6 +63,8 @@ Stuff that I am piling up inside this playground
 
 [Expressjs compression middleware](https://www.npmjs.com/package/compression)
 
+[Webpack dev middleware](https://webpack.github.io/docs/webpack-dev-middleware.html)
+
 
 ####Usefull read/watch - lots of solutions/inspirations for solutions in this repo come from here:
 

@@ -35,6 +35,17 @@ app.use('/model.json', FalcorServer.dataSourceRoute(function(req, res) {
 //This is just for testing purposes since all teh data is planed ot be handled through falcor router
 app.use('/api/v1/', apiRouter);
 
+var webpackDevMiddleware = require("webpack-dev-middleware");
+var webpack = require("webpack");
+var webpackConfig = require('./webpack.config.js');
+
+var compiler = webpack(webpackConfig);
+
+app.use(webpackDevMiddleware(compiler, {
+    publicPath: '/js/app/main.bundle.js',
+    hot: true,
+}));
+
 var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
