@@ -1,7 +1,7 @@
 const ReactDOM = require('react-dom/server');
 const Components = require('../../../dist/components.packed');
 
-const movieService = require('../../services/movies.js');
+const movieService = require('../../services/movies.js')();
 
 
 

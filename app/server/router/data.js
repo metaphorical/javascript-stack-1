@@ -1,5 +1,5 @@
 var FalcorRouter = require("falcor-router");
-var moviesService = require("../services/movies.js");
+var moviesService = require("../services/movies.js")();
 /**
  *  Falcor Router instance to handle data for the systemq
  */

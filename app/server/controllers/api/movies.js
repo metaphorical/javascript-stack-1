@@ -1,5 +1,4 @@
-const movieService = require('../../services/movies.js');
-const logger = global.quantum.logger;
+const movieService = require('../../services/movies.js')();
 
 var moviesController = {
     getByTitle: (req, res) => {

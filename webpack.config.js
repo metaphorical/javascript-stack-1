@@ -63,8 +63,6 @@ module.exports = [{
     //concatinating with name that includes new path (pushing it all to public/js, but sorting into static and app folders
     entry: {
         "app/main": "./app/client/views/app/main.js",
-
-        "../../tests/packed-specs/search": "./tests/specs/search-form-spec.js"
     },
     output: {
         path: path.join(__dirname, 'public/js'),
