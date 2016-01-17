@@ -1,4 +1,5 @@
-##Playing with *"Bleeding edge"* Front End stack
+##Full JavaScript stack application demo
+#####[Express.js, React, Falcor, ES6, Webpack, CSS Modules, PostCSS]
 
 Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education...
 
@@ -9,10 +10,14 @@ Client side structure is based around components with every component having it'
 ###Research conclusions
 
 ####React
-React allows us access to full range of cutting edge web UI concepts plus it allows us different conceptual approach to separation of concerns (full separation of concerns vs separation of technologies which is only real separation present in other approaches)
+React allows us access to full range of cutting edge web UI concepts plus it allows us different conceptual approach to separation of concerns (full separation of concerns vs separation of technologies which is only real separation present in most other approaches).
+
+It also allows us to render components on server side, giving us space to accomodate for any specification.
 
 ####Falcor
 Really useful and highly versatile library that can fully change and even improve a way you handle data in your app, especially when you are working in microservices (like) architecture with several services providing data.
+
+Apart from being data fetching library it includes special approaches that are allowing us to threat all the data as if it is available offline. 
 
 ####CSS Modules
 Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc...
