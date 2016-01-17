@@ -1,5 +1,8 @@
-// To get all the ES2015 fun stuff
-require('babel-register');
+// ES6 everywhere - remove when on node that supports all you need
+// ( It will probably be never :o) )
+require('babel-core/register')({
+    presets: ['es2015', 'react']
+});
 // ... and to get Promises
 require("babel-polyfill");
 
