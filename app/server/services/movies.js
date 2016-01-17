@@ -22,7 +22,7 @@ const movieService =  {
                     }
                 }
             );
-        })
+        });
     },
     getById: (id) => {
         logger.info('Fetching movie data by IMDB ID');
@@ -43,7 +43,7 @@ const movieService =  {
                     }
                 }
             );
-        })
+        });
     },
 
     searchByTitle: (title) => {

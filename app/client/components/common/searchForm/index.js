@@ -5,12 +5,7 @@ const searchForm = require('./searchForm.jsx');
 
 
 module.exports = React.createClass({
-    componentDidMount() {
-        console.log('mounted search form lite');
-    },
-    // componentWillMount() {
-    //     this.router = new Router();
-    // },
+    
     searchAction(e) {
         e.preventDefault();
         let searchText = this.searchInput.value.trim();

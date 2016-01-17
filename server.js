@@ -41,10 +41,12 @@ var webpackConfig = require('./webpack.config.js');
 
 var compiler = webpack(webpackConfig);
 
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: '/js/app/main.bundle.js',
-    hot: true,
-}));
+// Webpack middleware is commented out for now... no time ot wrap up
+// the research on reducing response times and stuff
+// app.use(webpackDevMiddleware(compiler, {
+//     hot: true,
+//     noInfo: true
+// }));
 
 var server = app.listen(3000, function () {
     var host = server.address().address;
