@@ -1,6 +1,8 @@
 ##Full JavaScript stack application demo
 #####[Express.js, React, Falcor, ES6, Webpack, CSS Modules, PostCSS]
 
+[![bitHound Overall Score](https://www.bithound.io/github/metaphorical/javascript-stack-1/badges/score.svg)](https://www.bithound.io/github/metaphorical/javascript-stack-1)   [![bitHound Code](https://www.bithound.io/github/metaphorical/javascript-stack-1/badges/code.svg)](https://www.bithound.io/github/metaphorical/javascript-stack-1)
+
 Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education...
 
 Server is built in Express and will utilize open movie db API and maybe more similar APIs. Most of core stuff are written in ES6.
@@ -17,7 +19,7 @@ It also allows us to render components on server side, giving us space to accomo
 ####Falcor
 Really useful and highly versatile library that can fully change and even improve a way you handle data in your app, especially when you are working in microservices (like) architecture with several services providing data.
 
-Apart from being data fetching library it includes special approaches that are allowing us to threat all the data as if it is available offline. 
+Apart from being data fetching library it includes special approaches that are allowing us to threat all the data as if it is available offline.
 
 ####CSS Modules
 Great way to approach React based view architecture - when you build component you can have your js logic in js file, your html structure in jsx file and your css in css file all connected inside js file. Every component in separate folder etc...
