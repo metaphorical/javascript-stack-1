@@ -13,7 +13,9 @@ npm run watch
 
 ##What is it (notes on the app, stack and learning stuff)
 
-Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education...
+Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education - I wanted to research and create know-how based on non trivial example of movie search application.
+
+>This stack does not have any database solution since none is needed for this kind of apps (API consumption kind), except for personal data management or configuration, which is (for now) not covered in this app demo.
 
 Server is built in Express and will utilize open movie db API and maybe more similar APIs. Most of core stuff are written in ES6.
 
