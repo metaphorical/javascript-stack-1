@@ -1,7 +1,17 @@
-##Full JavaScript stack application demo
-#####[Express.js, React, Falcor, ES6, Webpack, CSS Modules, PostCSS]
-
+#Full JavaScript stack application demo
+#####[Express.js, React, Falcor, ES6, Webpack, CSS
+Modules, PostCSS]
 [![bitHound Overall Score](https://www.bithound.io/github/metaphorical/javascript-stack-1/badges/score.svg)](https://www.bithound.io/github/metaphorical/javascript-stack-1)   [![bitHound Code](https://www.bithound.io/github/metaphorical/javascript-stack-1/badges/code.svg)](https://www.bithound.io/github/metaphorical/javascript-stack-1)
+
+
+##How to run it
+
+```
+npm install
+npm run watch
+```
+
+##What is it (notes on the app, stack and learning stuff)
 
 Me playing with technologies and concepts... Most of the code will be documented (at least I'll try) since sole purpose is education...
 
